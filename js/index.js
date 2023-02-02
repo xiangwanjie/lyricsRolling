@@ -79,8 +79,9 @@ const maxOffset = doms.ul.clientHeight - containerHeight;
  * @description: 设置 ul 元素的偏移量 
  * @return {*}
  */
-function setOffset() {
+function setOffset(e) {
   let index = findIndex();
+  // 计算 ul 偏移量
   let offset = (index * liHeight) + (liHeight / 2) - (containerHeight / 2);
   if (offset > maxOffset) {
     offset = maxOffset;
@@ -90,7 +91,7 @@ function setOffset() {
   offset > 0 ? doms.container.classList.add('up-mask') : doms.container.classList.remove('up-mask')
   offset < maxOffset ? doms.container.classList.add('dow-mask') : doms.container.classList.remove('dow-mask')
   
-  // 修改 ul 偏移量s
+  // 修改 ul 偏移量
   doms.ul.style.transform = `translateY(-${offset}px)`;
 
   // 去掉之前的 active 样式
