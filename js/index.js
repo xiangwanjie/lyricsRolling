@@ -76,7 +76,7 @@ const liHeight = doms.ul.children[0].clientHeight;
 const maxOffset = doms.ul.clientHeight - containerHeight;
 
 /**
- * @description: 设置 ul 元素的偏移量
+ * @description: 设置 ul 元素的偏移量 
  * @return {*}
  */
 function setOffset() {
